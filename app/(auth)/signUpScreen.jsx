@@ -42,7 +42,7 @@ const SignUpScreen = () => {
             address: "",
             postCode: "",
           }}
-        //   validationSchema={signupValidationSchema}
+          validationSchema={signupValidationSchema}
           onSubmit={handleSignUp}
         >
           {({

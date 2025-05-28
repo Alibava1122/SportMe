@@ -1,6 +1,8 @@
+import { router } from "expo-router";
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import Buttons from "../../components/ui/Buttons";
+
 
 const WalkThrough3 = () => {
   return (
@@ -20,7 +22,7 @@ const WalkThrough3 = () => {
           <Text style={styles.subText}>elite sed do eiusmod temporary</Text>
         </View>
         <View style={styles.buttonContainer}>
-        <Buttons Name={'Get Started'}  onPress={()=>{router.navigate("./walkThrough3")}}/>
+        <Buttons Name={'Get Started'}  onPress={()=>{router.replace("/(auth)")}}/>
         </View>
       </View>
       <View style={styles.container}>

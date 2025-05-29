@@ -3,12 +3,12 @@ import { router } from "expo-router";
 import { Formik } from "formik";
 import React from "react";
 import {
-    Image,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import LineTextInput from "../../components/ui/LineTextInput";
 import MainButton from "../../components/ui/MainButton";

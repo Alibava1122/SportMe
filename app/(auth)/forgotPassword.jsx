@@ -3,16 +3,16 @@ import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import React from "react";
 import {
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
+    StyleSheet,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    View,
 } from "react-native";
 import DarkTextInput from "../../components/ui/DarkTextInput";
 import MainButton from "../../components/ui/MainButton";
 
-const ConfirmCode = () => {
+const ForgotPassword = () => {
   return (
     <>
       <View style={styles.mainContainer}>
@@ -24,8 +24,8 @@ const ConfirmCode = () => {
         <View style={styles.bottomRightCircle} />
 
         <View style={styles.textContainer}>
-          <Text style={styles.verifyText}>Phone Number Verification</Text>
-          <Text style={styles.stepText}>Step 2 of 5 </Text>
+          <Text style={styles.verifyText}>Forgot Password</Text>
+          {/* <Text style={styles.stepText}>Step 2 of 5 </Text> */}
         </View>
         <LinearGradient
           colors={["#FC6767", "#EC008C"]}
@@ -34,9 +34,10 @@ const ConfirmCode = () => {
           style={styles.gradientLine}
         />
         <View>
-          <Text style={styles.phoneNoText}>Enter Phone Number </Text>
-          <DarkTextInput placeholder={"Enter Phone number"} />
+          <Text style={styles.phoneNoText}>Please Enter Your Email Addres </Text>
+          <DarkTextInput placeholder={"Email"} />
         </View>
+        <MainButton Name={"Send"} />
 
         <View style={styles.veritextContainer}>
           <Text style={styles.verText}>
@@ -82,7 +83,7 @@ const ConfirmCode = () => {
             />
           </View>
         </View>
-        <MainButton Name={"Verify Code"} onPress={()=>{router.navigate('/selectSport')}} />
+        <MainButton Name={"Verify Code"} onPress={()=>{router.navigate('./resetPassword')}} />
         <View style={styles.resendCodeContainer}>
           <Text style={styles.verText}>Didn’t get a code?</Text>
           <Text style={styles.resendCode}>Resend Code</Text>
@@ -92,7 +93,7 @@ const ConfirmCode = () => {
   );
 };
 
-export default ConfirmCode;
+export default ForgotPassword;
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -101,7 +102,8 @@ const styles = StyleSheet.create({
     // alignItems: "center",
     justifyContent: "center",
     padding: 20,
-    gap: 20
+    gap: 20,
+    paddingVertical: 60,
   },
   topLeftCircle: {
     width: 160,

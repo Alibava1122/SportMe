@@ -65,7 +65,9 @@ const Loginscreen = () => {
                 />
                 </View>
                 <View style={styles.forgotPassword}>
-          <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
+         <TouchableOpacity onPress={()=>{router.navigate('./forgotPassword')}}>
+         <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
+         </TouchableOpacity>
           </View>
         <View style={styles.button}>
         <MainButton Name={"Sign in"} onPress={handleSubmit}/>

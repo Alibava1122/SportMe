@@ -1,6 +1,6 @@
 
 import { useFonts } from 'expo-font';
-import { Redirect, Stack } from "expo-router";
+import { Stack } from "expo-router";
 
 import 'react-native-reanimated';
 
@@ -23,12 +23,7 @@ export default function RootLayout() {
  
        <>
        <Stack  screenOptions={{ headerShown: false }} />
-       {islogin ? (
-        <Redirect href={"/(auth)"} />
-        
-       ) : (
-        <Redirect href={"/(walkthrough)"} />
-       )}
+       {/* <Stack.Screen name="(auth)"  /> */}
      </>
      
     

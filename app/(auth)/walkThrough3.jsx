@@ -22,7 +22,7 @@ const WalkThrough3 = () => {
           <Text style={styles.subText}>elite sed do eiusmod temporary</Text>
         </View>
         <View style={styles.buttonContainer}>
-        <Buttons Name={'Get Started'}  onPress={()=>{router.navigate("/(auth)")}}/>
+        <Buttons Name={'Get Started'}  onPress={() => router.replace("/loginscreen")}/>
         </View>
       </View>
       <View style={styles.container}>

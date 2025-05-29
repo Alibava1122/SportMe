@@ -1,13 +1,14 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+
 import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
+import { Redirect, Stack } from "expo-router";
+
 import 'react-native-reanimated';
 
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { useState } from 'react';
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
+  const [islogin , setLogin ] = useState(false)
+  
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
@@ -18,13 +19,18 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(walkthrough)" options={{ headerShown: false }} />
-        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+   
+ 
+       <>
+       <Stack  screenOptions={{ headerShown: false }} />
+       {islogin ? (
+        <Redirect href={"/(auth)"} />
         
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+       ) : (
+        <Redirect href={"/(walkthrough)"} />
+       )}
+     </>
+     
+    
   );
 }

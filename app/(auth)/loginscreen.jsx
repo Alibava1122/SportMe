@@ -1,4 +1,3 @@
-import { router } from "expo-router";
 import { Formik } from "formik";
 import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
@@ -94,8 +93,11 @@ const Loginscreen = () => {
           <TouchableOpacity onPress={()=>{
              router.navigate('./signUpScreen')
           }}>
+          <View>
           <Text style={styles.tapText}>Tap me to Sign Up!</Text>
+          </View>
           </TouchableOpacity>
+        
     </View>
   )
 }

@@ -16,6 +16,7 @@ const _layout = () => {
     <Stack.Screen name='resetPassword'  options={{headerShown:false}}/>
     <Stack.Screen name='selectSport'  options={{headerShown:false}}/>
     <Stack.Screen name='addSocialMedia'  options={{headerShown:false}}/>
+    <Stack.Screen name='completeProfile'  options={{headerShown:false}}/>
     
    </Stack>
   )

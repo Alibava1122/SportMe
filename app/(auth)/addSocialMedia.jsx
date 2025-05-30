@@ -49,7 +49,7 @@ const AddSocialMedia = () => {
         <DarkTextInput placeholder={"paste your link"} />
       </View>
 
-      <MainButton Name={"Continue"} />
+      <MainButton Name={"Continue"} onPress={()=>{router.navigate('/completeProfile')}} />
     </View>
   );
 };

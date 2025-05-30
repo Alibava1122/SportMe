@@ -12,6 +12,7 @@ import {
 } from "react-native";
 import LineTextInput from "../../components/ui/LineTextInput";
 import MainButton from "../../components/ui/MainButton";
+import { signupValidationSchema } from "../../utils/validationSchemas";
 
 const SignUpScreen = () => {
   const handleSignUp = async (values) => {
@@ -42,7 +43,7 @@ const SignUpScreen = () => {
             address: "",
             postCode: "",
           }}
-          // validationSchema={signupValidationSchema}
+          validationSchema={signupValidationSchema}
           onSubmit={handleSignUp}
         >
           {({

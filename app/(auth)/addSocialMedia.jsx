@@ -2,12 +2,13 @@ import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import DarkTextInput from "../../components/ui/DarkTextInput";
 import MainButton from "../../components/ui/MainButton";
 
 const AddSocialMedia = () => {
   return (
+    <ScrollView>
     <View style={styles.mainContainer}>
       <TouchableOpacity onPress={() => router.back()} style={styles.backIcon}>
         <Ionicons name="chevron-back" size={25} color="#AAB2B7" />
@@ -51,6 +52,7 @@ const AddSocialMedia = () => {
 
       <MainButton Name={"Continue"} onPress={()=>{router.navigate('/completeProfile')}} />
     </View>
+    </ScrollView>
   );
 };
 

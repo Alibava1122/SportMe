@@ -2,7 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import React, { useState } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import MainButton from "../../components/ui/MainButton";
 
 const sportsList = [
@@ -29,6 +29,7 @@ const SelectSport = () => {
   };
 
   return (
+    <ScrollView>
     <View style={styles.mainContainer}>
       <TouchableOpacity onPress={() => router.back()} style={styles.backIcon}>
         <Ionicons name="chevron-back" size={25} color="#AAB2B7" />
@@ -81,6 +82,7 @@ const SelectSport = () => {
 
       <MainButton Name={"Continue"} onPress={()=>{router.navigate('/addSocialMedia')}} />
     </View>
+    </ScrollView>
   );
 };
 
